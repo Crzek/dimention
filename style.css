@@ -41,43 +41,7 @@ body {
   text-align: center;
 }
 
-@media (max-width:900px) {
-  html {
-    font-size: 10px;
-  }
 
-  .container {
-    width: 60%;
-
-  }
-  .container h1 {
-    font-size: .6rem;
-  }
-
-  nav ul li a {
-  font-size: .1rem;
-  min-width: 1em;
-  padding: 3px;
-  letter-spacing: normal;
-
-  }
-}
-
-@media (max-width:500px) {
-  html {
-    font-size: 10px;
-
-  }
-
-  .container {
-    width: 70%;
-  }
-
-  .container h1 {
-    font-size: .5rem;
-  }
-
-}
 
 .logo {
   font-size: 2rem;
@@ -118,7 +82,7 @@ body {
 
 .content p {
   font-size: .8em;
-  line-height: 1.5rem;
+  line-height: 1.5em;
   padding: 2rem 0;
   color: rgb(217, 217, 217);
 }
@@ -136,9 +100,10 @@ nav {
   display: inline-block;
   position: relative;
   border: 1px solid white;
-  margin-top: var(--dist);
   border-radius: 5px;
+  margin-top: var(--dist);
   letter-spacing: 1px;
+  font-size: 1rem;
 }
 
 
@@ -156,11 +121,18 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  font-size: .7rem;
-  min-width: 6.5rem;
+  font-size: 1em;
+  min-width: 6.9em;
   padding: .6em 1em;
   text-decoration: none;
   color: white;
+}
+
+a.first {
+  border-radius: 3px 0 0 3px;
+}
+a.last {
+  border-radius: 0 3px 3px 0 ;
 }
 
 nav ul li a:hover {
@@ -174,9 +146,62 @@ nav ul li:not(:last-child) {
   border-right: 1px solid white;
 
 }
-/* 
-.content,
-nav {
-  display: none;
-  transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-} */
+
+
+@media (max-width:900px) {
+  html {
+    font-size: 1rem;
+  }
+
+  .container {
+    width: 90%;
+
+  }
+  .container h1 {
+    font-size: 1em;
+  }
+
+  nav ul li a {
+  font-size: 1em;
+  /* min-width: 1em; */
+  padding: 3px;
+  letter-spacing: normal;
+
+  }
+}
+
+@media (max-width:500px) {
+  html {
+    font-size: .6rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  nav {
+    font-size: 2em;
+    border: none;
+
+  }
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-bottom: 1em;
+  }
+
+  nav ul li a {
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  nav ul li:not(:last-child) {
+    border-right: none;
+  }
+
+  a.last,
+  a.first {
+    border-radius:  5px;
+}
+
