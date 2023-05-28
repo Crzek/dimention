@@ -1,2 +1,3 @@
 # dimencion
-https://crzek.github.io/dimencion/
+static page
+https://crzek.github.io/dimention/
